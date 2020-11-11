@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Bolig.Mvc.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Bolig.Mvc.Controllers
 {
@@ -23,7 +24,15 @@ namespace Bolig.Mvc.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+
+        [Authorize(Roles = "Admin,User")]
+        public IActionResult Users()
         {
             return View();
         }

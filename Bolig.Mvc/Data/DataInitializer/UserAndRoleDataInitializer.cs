@@ -15,8 +15,8 @@ namespace Bolig.Mvc.Data.DataInitializer
             if (userManager.FindByEmailAsync("johndoe@localhost").Result == null)
             {
                 var user = new IdentityUser();
-                user.UserName = "johndoe@localhost";
-                user.Email = "johndoe@localhost";
+                user.UserName = "johndoe@localhost.dk";
+                user.Email = "johndoe@localhost.dk";
                 user.EmailConfirmed = true;
 
                 var result = userManager.CreateAsync(user, "P@ssw0rd1!").Result;
@@ -28,8 +28,8 @@ namespace Bolig.Mvc.Data.DataInitializer
             if (userManager.FindByEmailAsync("alex@localhost").Result == null)
             {
                 var user = new IdentityUser();
-                user.UserName = "alex@localhost";
-                user.Email = "alex@localhost";
+                user.UserName = "alex@localhost.dk";
+                user.Email = "alex@localhost.dk";
                 user.EmailConfirmed = true;
 
 
